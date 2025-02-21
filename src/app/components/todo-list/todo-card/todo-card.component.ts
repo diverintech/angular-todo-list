@@ -1,19 +1,19 @@
-import { NgFor, NgIf, NgTemplateOutlet } from '@angular/common';
-import { Component, computed, inject, OnInit } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
-import { MatTabsModule } from '@angular/material/tabs';
-import { TodoSignalsService } from '../../../services/todo-signals.service';
-import { TodoKeyLocalStorage } from '../../../models/enum/todoKeyLocalStorage';
-import { Todo } from '../../../models/model/todo.model';
+import {NgFor, NgIf, NgTemplateOutlet} from '@angular/common';
+import {Component, computed, inject, OnInit} from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTabsModule} from '@angular/material/tabs';
+import {TodoSignalsService} from '../../../services/todo-signals.service';
+import {TodoKeyLocalStorage} from '../../../models/enum/todoKeyLocalStorage';
+import {Todo} from '../../../models/model/todo.model';
 
 
 @Component({
-    selector: 'app-todo-card',
-    imports: [NgFor, NgIf, NgTemplateOutlet, MatCardModule, MatButtonModule, MatIconModule, MatTabsModule],
-    templateUrl: './todo-card.component.html',
-    styleUrls: ['./todo-card.component.scss']
+  selector: 'app-todo-card',
+  imports: [NgFor, NgIf, MatCardModule, MatButtonModule, MatIconModule, MatTabsModule],
+  templateUrl: './todo-card.component.html',
+  styleUrls: ['./todo-card.component.scss']
 })
 export class TodoCardComponent implements OnInit {
 
@@ -50,7 +50,7 @@ export class TodoCardComponent implements OnInit {
     if (todoId) {
       this.todosSignal.update((todos) => {
         return todos.map((todo) =>
-          todo.id === todoId ? { ...todo, done: !todo.done } : todo
+          todo.id === todoId ? {...todo, done: !todo.done} : todo
         );
         this.saveTodosInLocalStorage();
       });
