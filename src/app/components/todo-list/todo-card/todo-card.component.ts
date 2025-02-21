@@ -52,9 +52,9 @@ export class TodoCardComponent implements OnInit {
         return todos.map((todo) =>
           todo.id === todoId ? {...todo, done: !todo.done} : todo
         );
-        this.saveTodosInLocalStorage();
       });
     }
+    this.saveTodosInLocalStorage();
   }
 
   public handleDeleteTodo(todo: Todo): void {
@@ -62,8 +62,7 @@ export class TodoCardComponent implements OnInit {
     // which includes all items except the one with the matching id.
     // This effectively removes the specified todo item from the list.
     this.todosSignal.update((todos) => {
-      const updatedTodos = todos.filter((item) => item.id !== todo.id);
-      return updatedTodos;
+      return todos.filter((item) => item.id !== todo.id);
     });
 
     // Save the updated todos list in LocalStorage
