@@ -16,18 +16,17 @@ import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { TodoHeaderComponent } from '../todo-header/todo-header.component';
 
 @Component({
-  selector: 'app-todo-add-new-entry-form',
-  standalone: true,
-  imports: [CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatButtonModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatDialogModule],
-  templateUrl: './todo-add-new-entry-form.component.html',
-  styleUrl: './todo-add-new-entry-form.component.scss'
+    selector: 'app-todo-add-new-entry-form',
+    imports: [CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatButtonModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatDialogModule],
+    templateUrl: './todo-add-new-entry-form.component.html',
+    styleUrl: './todo-add-new-entry-form.component.scss'
 })
 export class TodoAddNewEntryFormComponent {
 

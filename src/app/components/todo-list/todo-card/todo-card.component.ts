@@ -10,11 +10,10 @@ import { Todo } from '../../../models/model/todo.model';
 
 
 @Component({
-  selector: 'app-todo-card',
-  standalone: true,
-  imports: [NgFor, NgIf, NgTemplateOutlet, MatCardModule, MatButtonModule, MatIconModule, MatTabsModule],
-  templateUrl: './todo-card.component.html',
-  styleUrls: ['./todo-card.component.scss']
+    selector: 'app-todo-card',
+    imports: [NgFor, NgIf, NgTemplateOutlet, MatCardModule, MatButtonModule, MatIconModule, MatTabsModule],
+    templateUrl: './todo-card.component.html',
+    styleUrls: ['./todo-card.component.scss']
 })
 export class TodoCardComponent implements OnInit {
 
