@@ -17,7 +17,7 @@ This application was built based on the Udemy course [Curso de Angular 15: Do In
 
 ## Technologies Used
 
-- Angular 19
+- Angular 20
 - TypeScript
 - Angular Material for UI components
 - Local Storage for data persistence
