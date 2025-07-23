@@ -5,10 +5,10 @@ import { TodoHeaderComponent } from './components/todo-list/todo-header/todo-hea
 import { TodoCardComponent } from './components/todo-list/todo-card/todo-card.component';
 
 @Component({
-    selector: 'app-root',
-    imports: [CommonModule, RouterOutlet, TodoHeaderComponent, TodoCardComponent],
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.scss'
+  selector: 'app-root',
+  imports: [CommonModule, TodoHeaderComponent, TodoCardComponent],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'angular-todo-list';
